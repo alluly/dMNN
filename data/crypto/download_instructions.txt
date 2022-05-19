@@ -1,0 +1,2 @@
+Run the download_cryptocmd.py script. 
+Make sure the cryptocmd package is installed.
