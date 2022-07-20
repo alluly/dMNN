@@ -199,7 +199,7 @@ class GenerativePickandsModule(pl.LightningModule):
                 if self.use_swa:
                     vec = F.relu( self.swa_net(noise) )# n_sample x d
                 else:
-                    vec = F.relu( self.net(noise) )# n_sample x d
+                    vec = F.relu( self.net(noise) ) # n_sample x d
 
             fre = invweibull.rvs(1, size=n_sample)
             nv  = fre.reshape(-1,1) * vec.detach().cpu().numpy()
